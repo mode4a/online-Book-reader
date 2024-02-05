@@ -34,10 +34,7 @@ private:
 
 public:
 
-    BookPrinter( const Book* book ): book(book) , current_page(0) {}
-    // std::string getNext() ;
-    // std::string getCurrent() const ;
-    // std::string getPrevious();
+    BookPrinter( const Book*) ;
     void printNext() ;
     void printCurrent() const ;
     void printPrevious();

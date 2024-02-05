@@ -1,7 +1,7 @@
 #include"Book.hpp"
 
 
-                                    // Book \\
+                                                        // Book \\
 
 Book::Book(){}
 Book::Book(  std::string title , std::string author , std::vector<std::string> pages ):
@@ -30,7 +30,9 @@ void Book::setBook(){
     }
 
 }
-                            // Book Printer \\ 
+                                                     // Book Printer \\ 
+
+BookPrinter::BookPrinter( const Book* book ) : book(book) , current_page(0) {}
 
 void BookPrinter::setPage( int idx ){
     current_page = idx ;
@@ -57,24 +59,6 @@ void BookPrinter::printCurrentPage( int current_page ) const{
     std::cout << "Current Page " ;
     std::cout << current_page+1 << "/" << book->getNumOfPages() << "\n" ;
 }
-// std::string BookPrinter::getPrevious(){
-//     if( has_previous() ){
-//     return book->getPage(--current_page) ;
-//     }
-//     return getCurrent() ;
-// }
-// std::string BookPrinter::getCurrent() const {
-//     if( checkCurrent() ){
-//     return book->getPage(current_page) ;
-//     }
-//     return " " ;
-// }
-// std::string BookPrinter::getNext(){
-//     if( has_next() ){
-//     return book->getPage(++current_page) ;
-//     }
-//     return getCurrent() ;
-// }
 void BookPrinter::printPrevious(){
     if( has_previous() ){
     std::cout << book->getPage(--current_page) << "\t" ;

@@ -16,7 +16,7 @@ protected:
 
 public: 
     User() ;
-    User( std::string user_name , std::string name , std::string email , std::string password ) ;
+    User( std::string , std::string , std::string , std::string) ;
 void printDetails() const ;
 void setUser() ;
 bool checkUSerAndPassword( std::string , std::string ) const ;
@@ -28,9 +28,9 @@ private:
     std::vector< Session* > sessions ;
 
 public: 
-    void addSession( Session* session ) ;
+    void addSession( Session* ) ;
     bool printSessions() const ;
-    Session* getSession( int idx ) const ;
+    Session* getSession( int ) const ;
     ~Customer();
 };
 
@@ -38,7 +38,7 @@ class Admin : public User {
 
 public :
     Admin() ;
-    Admin( std::string user_name , std::string name , std::string email , std::string password ) ;
+    Admin( std::string , std::string , std::string , std::string) ;
     void addBook() ;
     
 

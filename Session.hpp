@@ -12,8 +12,8 @@ private:
     // time
 public:
     
-    void setSessionBook( const Book* book_ ) ;
-    void setSessionpage( int page_ ) ; 
+    void setSessionBook( const Book*  ) ;
+    void setSessionpage( int  ) ; 
     void printSession() const ;
     int getPage() const ;
     const Book* getSessionBook() const ;

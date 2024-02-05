@@ -3,6 +3,10 @@
 
                                     // Book \\
 
+Book::Book(){}
+Book::Book(  std::string title , std::string author , std::vector<std::string> pages ):
+title(title) , author_name(author) , pages(pages){}
+
 std::string Book::getName() const {
     return title ;
 }

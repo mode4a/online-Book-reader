@@ -4,7 +4,6 @@
 #include<iostream>
 #include<vector>
 #include"Session.hpp"
-#include"System.hpp"
 
 
 class User{
@@ -16,8 +15,11 @@ protected:
     std::string password ;
 
 public: 
+    User() ;
+    User( std::string user_name , std::string name , std::string email , std::string password ) ;
 void printDetails() const ;
-
+void setUser() ;
+bool checkUSerAndPassword( std::string , std::string ) const ;
 };
 
 class Customer : public User {
@@ -27,16 +29,19 @@ private:
 
 public: 
     void addSession( Session* session ) ;
-    void printSessions() const ;
+    bool printSessions() const ;
     Session* getSession( int idx ) const ;
-    void setCustomer() ;
-
+    ~Customer();
 };
 
-class Admin{
+class Admin : public User {
 
 public :
+    Admin() ;
+    Admin( std::string user_name , std::string name , std::string email , std::string password ) ;
     void addBook() ;
+    
+
 };
 
 

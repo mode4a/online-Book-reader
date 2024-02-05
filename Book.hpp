@@ -12,7 +12,8 @@ private:
     std::vector<std::string> pages ;
 
 public:
-
+    Book();
+    Book(  std::string , std::string , std::vector<std::string> );
     void setBook() ;
     std::string getPage( int idx ) const ;
     std::string getName() const ;

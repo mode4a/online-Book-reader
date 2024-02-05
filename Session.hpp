@@ -3,8 +3,6 @@
 
 #include<iostream>
 #include"Book.hpp"
-
-
 class Session{
 
 private:
@@ -18,6 +16,7 @@ public:
     void setSessionpage( int page_ ) ; 
     void printSession() const ;
     int getPage() const ;
+    const Book* getSessionBook() const ;
     
 };
 
